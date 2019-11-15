@@ -61,15 +61,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AurynSky\Gems Ultimate Pack\Scripts\AnimationScript.cs" />
-    <Compile Include="Assets\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\Boat.cs" />
+    <Compile Include="Assets\Scripts\Enemies.cs" />
+    <Compile Include="Assets\Scripts\Gold.cs" />
+    <Compile Include="Assets\Scripts\GoldSpawner.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\Setback.cs" />
+    <Compile Include="Assets\Scripts\SpawnEnemies.cs" />
+    <Compile Include="Assets\Scripts\UI.cs" />
     <Compile Include="Assets\Scripts\UnderWater.cs" />
     <Compile Include="Assets\Scripts\UnderWaterBar.cs" />
     <Compile Include="Assets\UIBars\Scripts\ControlBar.cs" />
     <Compile Include="Assets\UIBars\Scripts\CriteriaRule.cs" />
     <Compile Include="Assets\UIBars\Scripts\UIBarScript.cs" />
     <Compile Include="Assets\UIBars\Scripts\UpdateAnimationRule.cs" />
+    <None Include="Assets\Stykized Vegetation Pack Free\Readme.txt" />
+    <None Include="Assets\HuMan\Documentation\AnimationsStart&amp;End.txt" />
     <None Include="Assets\SkySerie Freebie\Hdri setup.txt" />
     <None Include="Assets\AurynSky\Gems Ultimate Pack\READ ME.txt" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
@@ -82,17 +92,17 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>C:/Users/prisc/Desktop/Comp376_a3/Assignment3/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/prisc/Desktop/Comp376_a3/Assignment3/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/prisc/Desktop/Comp376_a3/Assignment3/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>C:/Users/prisc/Desktop/Comp376_a3/Assignment3/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>C:/Users/prisc/Desktop/Comp376_a3/Assignment3/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>C:/Users/prisc/Desktop/Comp376_a3/Assignment3/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+      <HintPath>C:/Users/prisc/Desktop/Comp376_a3/Assignment3/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

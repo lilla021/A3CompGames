@@ -10,47 +10,74 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = -9.81f;
     public float jumpHeight = 2f;
     public float groundDistance = 0.4f;
+
+    bool isGrounded;
+   // bool contactWithBar;
+   // bool contactWithCoins;
     public bool isSwimming = false;
+
+    public Transform SpawnPoint, Player;
     public Transform groundCheck;
+   // public Transform goldBar;
+   // public Transform goldCoins;
+
     public LayerMask groundMask;
+   // public LayerMask goldMask;
 
     Vector3 velocity;
 
-    bool isGrounded;
+    
 
     void Start()
     {
+        speed -= PlayerStats.weightSpeed;
         PlayerStats.maxOxygen = 50;
         PlayerStats.currentOxygen = PlayerStats.maxOxygen;
         PlayerStats.maxLife = 2;
         PlayerStats.currentLife = PlayerStats.maxLife;
+        //controller = GetComponent<CharacterController>();
+        /*SpawnPoint = GameObject.Find("SpawnPoint").transform;
+        Player = GameObject.Find("FirstPersonPlayer").transform;*/
     }
 
     void Update()
     {
         //Check ground
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        //contactWithBar = Physics.CheckSphere(controller.transform.position, 1.0f, goldMask);
 
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
 
-   /*     //Check Life
+      /*  if (contactWithBar)
+        {
+            Debug.Log("Made contact with gold!");
+        }*/
+
+        //Check Life
         if (PlayerStats.currentLife <= 0.0)
         {
-            transform.position = PlayerStats.startingLocation;
+            Player.transform.position = SpawnPoint.transform.position;
+            //controller.GetComponent<CharacterController>().enabled = false;
+            //controller.transform.position = new Vector3(854.25f, 41.82f, 411.0f);
+            // controller.transform.rotation = newPosition.rotation;
+            //controller.GetComponent<CharacterController>().enabled = true;
+            //velocity.y = -2f;
+            //transform.position = PlayerStats.startingLocation;
+            // controller.Move(velocity);
             resetGame();
         }
-*/
-   /*     void resetGame()
+
+        void resetGame()
         {
-            transform.position = PlayerStats.startingLocation;
+            //transform.position = PlayerStats.startingLocation;
             PlayerStats.currentLife = PlayerStats.maxLife;
             PlayerStats.currentOxygen = PlayerStats.maxOxygen;
             PlayerStats.currentLevel = PlayerStats.startingLevel;
             PlayerStats.currentPoints = PlayerStats.startingPoints;
-        } */   
+        }
         //Oxygen bar
         if (transform.position.y >= 35f)
         {
@@ -75,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetButton("Jump") && isSwimming)
         {
-            speed = 5.0f;
+            speed = 5.0f - PlayerStats.weightSpeed;
             gravity = -3f;
             if ((Input.GetButton("Horizontal") || Input.GetButton("Vertical")) && transform.position.y >= 35f)
             {
@@ -96,4 +123,6 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
     }
+
 }
+

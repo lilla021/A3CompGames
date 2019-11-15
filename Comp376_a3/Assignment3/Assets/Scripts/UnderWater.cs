@@ -15,7 +15,7 @@ public class UnderWater : MonoBehaviour
     void Start()
     {
         normalColor = new Color(0.5f, 0.5f, 0.5f);
-        underWaterColor = new Color(0.22f, 0.65f, 0.77f);
+        underWaterColor = new Color(0.22f, 0.65f, 0.77f, 0.5f);
         playerMove = GetComponent<PlayerMovement>();
        
     }
@@ -39,11 +39,10 @@ public class UnderWater : MonoBehaviour
     void setUnderWater()
     {
         RenderSettings.fogColor = underWaterColor;
-        RenderSettings.fogDensity = 0.03f;
+        RenderSettings.fogDensity = 0.02f;
         playerMove.gravity = -3.0f;
         playerMove.speed = 4.0f;
         playerMove.jumpHeight = 3.0f;
-        //playerMove.isSwimming = true;
     }
 
     void setNormal()
@@ -53,7 +52,6 @@ public class UnderWater : MonoBehaviour
         playerMove.gravity = -9.81f;
         playerMove.speed = 12.0f;
         playerMove.jumpHeight = 4.0f;
-        //playerMove.isSwimming = false;
     }
  
 }

@@ -12,13 +12,11 @@ public class UnderWaterBar : MonoBehaviour
     public float barFiller;
     public float heartFiller1;
     public float heartFiller2;
-    private PlayerMovement playerMove;
     void Start()
     {
         barFiller = 50;
         heartFiller1 = 1;
         heartFiller2 = 1;
-        playerMove = GetComponent<PlayerMovement>();
     }
 
     
@@ -52,7 +50,6 @@ public class UnderWaterBar : MonoBehaviour
    
     void resetGame()
     {
-        playerMove.transform.position = PlayerStats.startingLocation;
         PlayerStats.currentLife = PlayerStats.maxLife;
         PlayerStats.currentOxygen = PlayerStats.maxOxygen;
         PlayerStats.currentLevel = PlayerStats.startingLevel;

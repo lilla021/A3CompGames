@@ -3,7 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SpawnPoint
+  - FirstPersonPlayer
+  - Coins
+  - Bar
+  - Diamond
+  - shark
+  - rightShark
+  - leftShark
+  - s_rightShark
+  - m_rightShark
+  - l_rightShark
+  - s_leftShark
+  - m_leftShark
+  - l_leftShark
   layers:
   - Default
   - TransparentFX
@@ -15,8 +29,8 @@ TagManager:
   - 
   - PostProcessing
   - Ground
-  - 
-  - 
+  - Gold
+  - Boat
   - 
   - 
   - 
